@@ -22,10 +22,10 @@ namespace dotnetapp.Controllers
             context.SaveChanges();
             return Ok();
         }
-        public IActionResult Login(User u) {
+        public IActionResult Login(User U) {
             if(ModelState.IsValid)
             {
-                var data=context.Users.FirstOrDefault(u=>u.UserName==U.Name && u.password==U.password);
+                var data=context.Users.FirstOrDefault(u=>u.UserName==U.UserName && u.password==U.password);
                 return RedirectToAction("Login",U);
             }
             return Ok();
