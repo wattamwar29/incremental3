@@ -15,12 +15,13 @@ namespace dotnetapp.Controllers
     public class AdminController : ControllerBase
     {
         private readonly ApplicationDbContext context;
-    
+    //    ApplicationDbContext context = new ApplicationDbContext();
  
         public AdminController(ApplicationDbContext _context)
         {
             context = _context;
         }
+ 
  
         public IActionResult GetPlayers()
         {
@@ -28,40 +29,56 @@ namespace dotnetapp.Controllers
             return Ok(data);
         }
  
-        public IActionResult GetTeams()
+        public IActionResult GetTeams(int id)
         {
             var data=context.Teams.ToList();
-            return Ok(data);
-           
+            return Ok(data);  
         }
-       
-        [HttpPut]
-        [Route("EditPlayer/{id}")]
-        public IActionResult PutPlayer(int id, Player p)
-        {
-            Player pl=context.Players.Find(id);
-            if(ModelState.IsValid){
-                var player = new Player
-            {
-                Id=1,
-                Name = "John Doe",
-                Age=34,
-                BiddingPrice=25,
-                Category="adb"
-            };
-        }
-            return Ok();           
-    }
-        [HttpDelete]
-        [Route("DeletePlayer/{id}")]
-        public IActionResult DeletePlayer(int id,Player p)
-        {
  
-                var data=context.Players.Find(id);
+ 
+ 
+        public IActionResult PutPlayer(int id, Player player)
+        {
+            try
+            {
+ 
+            if(ModelState.IsValid)
+            {
+                Player p = new Player{};
+                Player e = context.Players.Find(id);
+                e.Name = player.Name;
+                e.Age = player.Age;
+                e.Category = player.Category;
+                e.BiddingPrice = player.BiddingPrice;
+                context.SaveChanges();
+                return Ok();
+            }
+            }
+            catch(System.Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+ 
+            return BadRequest("Unable to Edit Record");
+        }
+ 
+ 
+ 
+        public IActionResult DeletePlayer(int id)
+        {
+            try
+            {
+                var data = context.Players.Find(id);
                 context.Players.Remove(data);
                 context.SaveChanges();
-                return Ok();        
-        }
+                return Ok();
+            }
+            catch(System.Exception ex)
+            {
+                return BadRequest(ex.Message);
  
+            }
+        }
     }
+ 
 }

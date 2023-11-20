@@ -20,7 +20,7 @@ namespace dotnetapp.Controllers
         {
             context.Users.Add(u);
             context.SaveChanges();
-            return Ok(data);
+            return Ok();
         }
         public IActionResult Login(User u) {
             if(ModelState.IsValid)
