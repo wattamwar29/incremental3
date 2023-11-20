@@ -16,20 +16,39 @@ namespace dotnetapp.Controllers
         {
             context = _context;
         }
-        public IActionResult Register(User u)
+ 
+        [HttpGet]
+ 
+        [Route("ListTeam")]
+        public IActionResult Get()
         {
+            var data=from m in context.Teams select m;
+            return Ok(data);
+        }
+ 
+        [HttpPost]
+        [Route("UserLogin")]
+ 
+        public IActionResult Login(User U) {
+            if(ModelState.IsValid){
+                var data= context.Users.FirstOrDefault(u=> u.Name== U.Name && u.password == U.password);
+                return RedirectToAction("Login", U);
+            }
+            return Ok();
+ 
+        }
+ 
+        [HttpPost]
+        [Route("UserRegister")]
+        public IActionResult Register(User u) {
+ 
             context.Users.Add(u);
             context.SaveChanges();
             return Ok();
         }
-        public IActionResult Login(User U) {
-            if(ModelState.IsValid)
-            {
-                var data=context.Users.FirstOrDefault(u=>u.Name==U.Name && u.password==U.password);
-                return RedirectToAction("Login",U);
-            }
-            return Ok();
-        }
+ 
+ 
+ 
        
     }
 }
