@@ -5,10 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { GetplayersComponent } from './getplayers/getplayers.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    GetplayersComponent,
     
   ],
   imports: [
