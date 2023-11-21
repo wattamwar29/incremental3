@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { AdminService } from '../services/admin.service';
+import { IPlayer } from '../models/iplayer';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-findplayer',
@@ -7,9 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FindplayerComponent implements OnInit {
 
-  constructor() { }
+  constructor(private ps: AdminService,private ar: ActivatedRoute) { }
+  playerdata: IPlayer
+  id:number
 
-  ngOnInit(): void {
+  ngOnInit() {
+    const tid=this.ar.snapshot.paramMap.get('id')
+    this.id=Number(tid)
+    this.ps.getPlayer(this.id).subscribe((data:IPlayer)=>{
+    this.playerdata=data
+    })
   }
 
 }
