@@ -14,4 +14,5 @@ export class AdminService {
   {
     return this.httpclient.get<any[]>(this.url + '/GetPlayer');
   }
+  
 }
