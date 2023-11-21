@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AdminService } from '../services/admin.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Player } from '../models/player';
 
 @Component({
@@ -10,7 +10,7 @@ import { Player } from '../models/player';
 })
 export class FindplayersComponent implements OnInit {
 
-  constructor(private as: AdminService,private ar: ActivatedRoute) { }
+  constructor(private as: AdminService,private ar: ActivatedRoute, private router:Router) { }
   playerdata: Player
   id:number
 
@@ -22,5 +22,10 @@ export class FindplayersComponent implements OnInit {
     })
   }
 
+    Show()
+{
+   this.router.navigate(['/GetPlayer'])
 }
+}
+
 
