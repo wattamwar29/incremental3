@@ -1,34 +1,39 @@
 <!-- <p>addplayers works!</p> -->
-<h2>Adding Players</h2>
 <hr>
 <form (ngSubmit)="saveData(playerdata)" #playerform="ngForm">
     <div>
         <label for="name">Player Name</label>
-        <input type="text" id="name" name="name" placeholder="enter player name"
+        <input type="text" id="name" name="name" placeholder="Enter Player Name"
         [(ngModel)]="playerdata.name" required #name="ngModel">
     </div>
+
+    <div>
+        <label for="category">Category/label>
+        <input type="text" id="category" name="category" placeholder="Enter Category"
+        [(ngModel)]="playerdata.category" required #name="ngModel">
+    </div>
+
     <div>
         <label for="age">Age</label>
-        <input type="text" id="age" name="age" placeholder="enter age"
-        [(ngModel)]="playerdata.age" required #age="ngModel">
+        <input type="text" id="age" name="age" placeholder="Enter Player Age"
+        [(ngModel)]="playerdata.age" required #name="ngModel">
     </div>
-    <div>
-        <label for="category">Category</label>
-        <input type="text" id="category" name="year" placeholder="enter category"
-        [(ngModel)]="playerdata.category" required #category="ngModel">
-    </div>
+
     <div>
         <label for="biddingPrice">Bidding Price</label>
-        <input type="text" id="biddingPrice" name="year" placeholder="enter bidding price"
-        [(ngModel)]="playerdata.biddingPrice" required #biddingPrice="ngModel">
+        <input type="text" id="biddingPrice" name="biddingPrice" placeholder="Enter Bidding Price"
+        [(ngModel)]="playerdata.biddingPrice" required #name="ngModel">
     </div>
+
+
     <div>
-        <label for="teamId"> Team ID</label>
-        <input type="text" id="year" name="year" placeholder="enter Team ID"
-        [(ngModel)]="playerdata.teamId" required #teamId="ngModel">
+        <label for="teamId">Team Id</label>
+        <input type="text" id="teamId" name="teamId" placeholder="Team Id"
+        [(ngModel)]="playerdata.teamId" required #name="ngModel">
     </div>
-    <br>
+    
     <p>
         <input type="submit" value="Save" class="btn btn-Info" [disabled]="!playerform.valid">
     </p>
 </form>
+
