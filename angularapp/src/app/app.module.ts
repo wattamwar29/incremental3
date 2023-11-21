@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { GetplayersComponent } from './getplayers/getplayers.component';
+import { AddplayersComponent } from './addplayers/addplayers.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GetplayersComponent,
+    AddplayersComponent,
     
   ],
   imports: [

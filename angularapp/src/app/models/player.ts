@@ -4,4 +4,5 @@ export interface Player {
     age:number
     catergory:string
     biddingprice:number
+    teamid:number
 }

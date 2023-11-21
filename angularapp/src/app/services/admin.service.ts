@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import { Observable } from 'rxjs';
- 
+import { Player } from '../models/player';
+import {HttpErrorResponse,HttpHeaders} from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
@@ -14,5 +15,8 @@ export class AdminService {
   {
     return this.httpclient.get<any[]>(this.url + '/GetPlayer');
   }
-  
+  httpOptions={headers:new HttpHeaders({'Content-type':'application/json'})}
+  addMovie(playerdata:Player):Observable<Player>{
+    return this.httpclient.post<Player>(this.url+'/AddPlayer',playerdata,this.httpOptions)
+  }
 }
