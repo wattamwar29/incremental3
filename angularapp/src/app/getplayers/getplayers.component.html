@@ -18,14 +18,16 @@
                     <td> {{m.category}} </td>
                     <td> {{m.biddingPrice}} </td>
                     <td> {{m.teamId}} </td>
-                   
-                    <a [routerLink] = "['/find/',m.id]">Details</a>&nbsp;&nbsp;
+                    <a routerLink="addplayers">Add Players</a>&nbsp;&nbsp;
+                    <a routerLink="editplayers">Edit Players</a>&nbsp;&nbsp;
+                    <a routerLink="findplayers">Find Players</a>&nbsp;&nbsp;
+                    <!-- <a [routerLink] = "['/find/',m.id]">Details</a>&nbsp;&nbsp;
                     <a [routerLink] = "['/edit/',m.id]">Edit</a>&nbsp;&nbsp;
-                    <a [routerLink] = "['/delete/',m.id]">Delete</a>&nbsp;&nbsp;
+                    <a [routerLink] = "['/delete/',m.id]">Delete</a>&nbsp;&nbsp; -->
                 </tr>
             </tbody>
         </table>
-        <a routerLink="addplayers">Add Players</a>&nbsp;&nbsp;
-        <a routerLink="editplayers">Add Players</a>&nbsp;&nbsp;
+        
+
     </div>
 </div>
