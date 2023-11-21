@@ -11,22 +11,16 @@ import { Player } from '../models/player';
 export class FindplayersComponent implements OnInit {
 
   constructor(private as: AdminService,private ar: ActivatedRoute) { }
-  moviedata: Player
+  playerdata: Player
   id:number
 
   ngOnInit() {
     const tid=this.ar.snapshot.paramMap.get('id')
     this.id=Number(tid)
-    this.ms.getMovie(this.id).subscribe((data:IMovie)=>{
-      this.moviedata=data
+    this.as.getPlayer(this.id).subscribe((data:Player)=>{
+      this.playerdata=data
     })
   }
 
 }
 
-//   constructor() { }
-
-//   ngOnInit(): void {
-//   }
-
-// }

@@ -21,5 +21,10 @@ export class AdminService {
   }
   editPlayers(playerdata:Player):Observable<Player>{
     return this.httpclient.put<Player>(this.url +'/EditPlayer/'+playerdata.id,playerdata,this.httpOptions)
-}
+  }
+  getPlayer(id:number):Observable<Player>
+  {
+    return this.httpclient.get<Player>(this.url+'/GetPlayer{id}')
+  }
+
 }
