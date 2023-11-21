@@ -1,0 +1,21 @@
+<h3>Details of Player {{playerdata.name}}</h3>
+<div style="background-color: lawngreen;">
+    Id:{{playerdata.id}}<br>
+    Name:{{playerdata.}}<br>
+    Age:{{playerdata.age}}<br>
+    Category:{{playerdata.category}}<br>
+    BiddingPrice:{{playerdata.biddingprice}}<br>
+    TeamId:{{playerdata.teamid}
+
+</div>
+<br><br>
+<a [routerLink]="['/getplayers']">Back to list</a>
+<br>
+<br>
+<input type="button" value="Show Player" class="btn btn-success" (click)="Show()">
+id:number
+    name:string
+    age:number
+    category:string
+    biddingprice:number
+    teamid:number
