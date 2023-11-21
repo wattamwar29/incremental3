@@ -8,7 +8,7 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './findplayer.component.html',
   styleUrls: ['./findplayer.component.css']
 })
-export class FindplayersComponent implements OnInit {
+export class FindplayerComponent implements OnInit {
 
   constructor(private ps: AdminService,private ar: ActivatedRoute) { }
   playerdata: IPlayer
