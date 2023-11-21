@@ -48,7 +48,7 @@ namespace dotnetapp.Controllers
        
  
         [HttpPut]
-        [Route("EditPlayer")]
+        [Route("EditPlayer/{id}")]
         public IActionResult PutPlayer(int id, Player player)
         {
             try
@@ -75,7 +75,7 @@ namespace dotnetapp.Controllers
         }
  
         [HttpDelete]
-        [Route("DeletePlayer")]
+        [Route("DeletePlayer/{id}")]
         public IActionResult DeletePlayer(int id)
         {
             try
@@ -123,7 +123,7 @@ namespace dotnetapp.Controllers
         }
  
         [HttpPut]
-        [Route("EditTeam")]
+        [Route("EditTeam/{id}")]
         public IActionResult PutTeam(int id, Team t)
         {
             try
@@ -148,7 +148,7 @@ namespace dotnetapp.Controllers
  
  
         [HttpDelete]
-        [Route("DeleteTeam")]
+        [Route("DeleteTeam/{id}")]
         public IActionResult DeleteTeam(int id)
         {
             try
