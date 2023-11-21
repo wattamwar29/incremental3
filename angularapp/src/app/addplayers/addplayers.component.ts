@@ -14,10 +14,10 @@ export class AddplayersComponent implements OnInit {
   constructor(private as:AdminService,private route:Router) { }
   saveData(player:Player):void{
     this.playerdata=player
-    this.as.addMovie(this.moviedata).subscribe(
+    this.as.addPlayers(this.playerdata).subscribe(
       ()=>{
         alert('Record Added Successfully')
-        this.route.navigate(['/listmovies'])
+        this.route.navigate(['/GetPlayers'])
       }
     )
   }

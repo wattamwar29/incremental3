@@ -1,1 +1,14 @@
 <p>addplayers works!</p>
+<hr>
+<form (ngSubmit)="saveData(playerdata)" #playerform="ngForm">
+    <div>
+        <label for="name">Player Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter Player Name"
+        [(ngModel)]="playerdata.name" required #name="ngModel">
+    </div>
+    <div>
+        <label for="category">Category/label>
+        <input type="text" id="category" name="category" placeholder="Enter Category"
+        [(ngModel)]="playerdata.category" required #name="ngModel">
+    </div>
+</form>

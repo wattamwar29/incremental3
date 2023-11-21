@@ -16,7 +16,7 @@ export class AdminService {
     return this.httpclient.get<any[]>(this.url + '/GetPlayer');
   }
   httpOptions={headers:new HttpHeaders({'Content-type':'application/json'})}
-  addMovie(playerdata:Player):Observable<Player>{
+  addPlayers(playerdata:Player):Observable<Player>{
     return this.httpclient.post<Player>(this.url+'/AddPlayer',playerdata,this.httpOptions)
   }
 }
