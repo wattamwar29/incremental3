@@ -11,13 +11,13 @@ import { Team } from '../models/team';
 export class FindteamComponent implements OnInit {
   
   constructor(private as:AdminService,private ar: ActivatedRoute, private route:Router) { }
-  teamdata: Team
+  teamdata: Team[]
   teamId:number
 
   ngOnInit(): void {
     const tid = this.ar.snapshot.paramMap.get('id')
     this.teamId=Number(tid)
-    this.as.getTeam(this.teamId).subscribe((data:Team)=>{
+    this.as.getTeam().subscribe((data:Team[])=>{
     this.teamdata=data
      })
   }
@@ -27,4 +27,3 @@ export class FindteamComponent implements OnInit {
   }
 
 }
-this.ms.getMovie(this.id).subscribe((data:IMovie)=>{
