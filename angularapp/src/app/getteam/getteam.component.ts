@@ -7,11 +7,11 @@ import { AdminService } from '../services/admin.service';
   styleUrls: ['./getteam.component.css']
 })
 export class GetteamComponent implements OnInit {
-  playerdata: any[]=[]
+  teamdata: any[]=[]
  
   constructor(private as:AdminService) { 
     this.as.getTeam().subscribe(data =>{this.teamdata.push(...data)})
-    console.log(this.playerdata)
+    console.log(this.teamdata)
      }
   
 

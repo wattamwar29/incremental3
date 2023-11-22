@@ -1,1 +1,29 @@
-<p>getteam works!</p>
+<div class = "container">
+    <div class = "jumbotron">
+        <h1>Player Listing</h1>
+        <table class = "table">
+            <thead>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Category</th>
+                <th>Bidding Price</th>
+                <th>Team ID</th>
+                
+            </thead>
+            <tbody>
+                <tr *ngFor = "let m of playerdata">
+                    <td> {{m.id}} </td>
+                    <td> {{m.name}} </td>
+                    <td> {{m.age}} </td>
+                    <td> {{m.category}} </td>
+                    <td> {{m.biddingPrice}} </td>
+                    <td> {{m.teamId}} </td>
+                    
+                </tr>
+            </tbody>
+        </table>
+                    
+
+    </div>
+</div>
