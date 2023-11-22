@@ -3,6 +3,7 @@ import {HttpClient} from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Player } from '../models/player';
 import {HttpErrorResponse,HttpHeaders} from '@angular/common/http';
+import { Team } from '../models/team';
 @Injectable({
   providedIn: 'root'
 })
@@ -30,5 +31,31 @@ export class AdminService {
   {
     return this.httpclient.delete<Player>(this.url + '/DeletePlayer/' + id)
   }
+  getTeam():Observable<Team[]>
+  {
+    return this.httpclient.get<Team[]>(this.url+ '/GetTeams')
+  }
+ 
+  findTeam(id:number):Observable<Team>
+  {
+    return this.httpclient.get<Team>(this.url+'/DisplayTeams/'+id)
+  }
+ 
+  addTeam(teamdata:Team):Observable<Team>
+  {
+    return this.httpclient.post<Team>(this.url+'/AddTeam',teamdata,this.httpOptions)
+  }
+ 
+  editTeam(teamdata:Team):Observable<Team>
+  {
+    return this.httpclient.put<Team>(this.url+'/EditTeam/'+teamdata.teamId,teamdata,this.httpOptions)
+  }
+ 
+  deleteTeam(id:number):Observable<Team>{
+    return this.httpclient.delete<Team>(this.url+'/DeleteTeam/'+id)
+  }
+ 
+ 
+}
 
 }
