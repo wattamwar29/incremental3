@@ -10,8 +10,8 @@ const routes: Routes = [
   {path:'getplayers',component:GetplayersComponent},
   {path:'addplayers',component:AddplayersComponent},
   {path:'GetPlayer/:id',component:FindplayersComponent},
-  {path:'editplayers',component:EditplayersComponent},
-  {path:'deleteplayers',component:DeleteplayersComponent}
+  {path:'editplayers/:id',component:EditplayersComponent},
+  // {path:'deleteplayers/:id',component:DeleteplayersComponent}
   
 ];
 

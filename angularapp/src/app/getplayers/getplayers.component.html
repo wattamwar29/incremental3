@@ -19,10 +19,10 @@
                     <td> {{m.category}} </td>
                     <td> {{m.biddingPrice}} </td>
                     <td> {{m.teamId}} </td>
-                    <td><a [routerLink]="['/addplayers']">Add Players</a>&nbsp;&nbsp;</td>
-                    <td><a [routerLink]="['/editplayers']">Edit Players</a>&nbsp;&nbsp;</td>
-                    <td><a [routerLink]="['/GetPlayer/',m.id]">Find Players</a>&nbsp;&nbsp;</td>
-                    
+                    <td><a [routerLink]="['/addplayers']">Details</a>&nbsp;&nbsp;</td>
+                    <td><a [routerLink]="['/editplayers',m.id]">Edit</a>&nbsp;&nbsp;</td>
+                    <td><a [routerLink]="['/GetPlayer/',m.id]">Find</a>&nbsp;&nbsp;</td>
+                    <!-- <td><a [routerLink]="['/deleteplayers',m.id]">Edit</a>&nbsp;&nbsp;</td> -->
                 </tr>
             </tbody>
         </table>
