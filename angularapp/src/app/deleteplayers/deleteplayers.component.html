@@ -1,1 +1,33 @@
-<p>deleteplayers works!</p>
+<h2>Delete Player</h2>
+<hr>
+<form (ngSubmit)="saveData(playerdata)" #playerform="ngForm">
+<div>
+<label for="id">ID</label>
+<input type="text" id="id" name="id" readonly [(ngModel)]="playerdata.id">
+</div>
+<div>
+<label for="name">Player Name</label>
+<input type="text" id="name" name="name" readonly [(ngModel)]="playerdata.name">
+</div>
+<div>
+<label for="age">Age</label>
+<input type="text" id="age" name="age" placeholder="enter age"
+        [(ngModel)]="playerdata.age" required #age="ngModel">
+</div>
+<div>
+<label for="category">Category</label>
+<input type="text" id="category" name="category" readonly [(ngModel)]="playerdata.category" >
+</div>
+<div>
+<label for="biddingprice">Bidding Price</label>
+<input type="text" id="biddingprice" name="biddingprice" readonly [(ngModel)]="playerdata.biddingprice" >
+</div>
+<div>
+<label for="teamId"> Team ID</label>
+<input type="text" id="teamid" name="teamid"  readonly [(ngModel)]="playerdata.teamid" >
+</div>
+<br>
+<p>
+<input type="submit" value="Delete" class="btn btn-Info">
+</p>
+</form>

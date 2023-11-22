@@ -11,7 +11,7 @@ const routes: Routes = [
   {path:'addplayers',component:AddplayersComponent},
   {path:'GetPlayer/:id',component:FindplayersComponent},
   {path:'editplayers/:id',component:EditplayersComponent},
-  // {path:'deleteplayers/:id',component:DeleteplayersComponent}
+  {path:'deleteplayers/:id',component:DeleteplayersComponent}
   
 ];
 
