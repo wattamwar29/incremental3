@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AdminService } from '../services/admin.service';
 import { ActionResult } from 'puppeteer';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Team } from '../models/team';
 
 @Component({
   selector: 'app-findteam',
@@ -10,26 +11,20 @@ import { Router } from '@angular/router';
 })
 export class FindteamComponent implements OnInit {
 
-  constructor(private as:AdminService,private ar: ActionResult, private router:Router) { }
+  constructor(private as:AdminService,private ar: ActivatedRoute, private route:Router) { }
+  teamdata: Team
 
   ngOnInit(): void {
+    const tid = this.ar.snapshot.paramMap.get('id')
+    this.teamId=Number(tid)
+    this.as.getTeam(this.teamId).subscribe((data:Team)=>{
+      this.teamdata=data
+    })
+  }
+  Show()
+  {
+    this.route.navigate(['/GetTeam'])
   }
 
 }
-// constructor(private as: AdminService,private ar: ActivatedRoute, private router:Router) { }
-//   playerdata: Player
-//   id:number
-
-//   ngOnInit() {
-//     const tid=this.ar.snapshot.paramMap.get('id')
-//     this.id=Number(tid)
-//     this.as.getPlayer(this.id).subscribe((data:Player)=>{
-//       this.playerdata=data
-//     })
-//   }
-
-//     Show()
-// {
-//    this.router.navigate(['/getplayers'])
-// }
-// }
+ 

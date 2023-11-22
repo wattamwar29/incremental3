@@ -10,7 +10,7 @@ import { Player } from '../models/player';
 })
 export class FindplayersComponent implements OnInit {
 
-  constructor(private as: AdminService,private ar: ActivatedRoute, private router:Router) { }
+  constructor(private as: AdminService,private ar: ActivatedRoute, private route:Router) { }
   playerdata: Player
   id:number
 
@@ -24,7 +24,7 @@ export class FindplayersComponent implements OnInit {
 
     Show()
 {
-   this.router.navigate(['/getplayers'])
+   this.route.navigate(['/getplayers'])
 }
 }
 
