@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { AdminService } from '../services/admin.service';
-import { ActionResult } from 'puppeteer';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Team } from '../models/team';
 
@@ -10,16 +9,17 @@ import { Team } from '../models/team';
   styleUrls: ['./findteam.component.css']
 })
 export class FindteamComponent implements OnInit {
-
+  
   constructor(private as:AdminService,private ar: ActivatedRoute, private route:Router) { }
   teamdata: Team
+  teamId:number
 
   ngOnInit(): void {
     const tid = this.ar.snapshot.paramMap.get('id')
     this.teamId=Number(tid)
     this.as.getTeam(this.teamId).subscribe((data:Team)=>{
-      this.teamdata=data
-    })
+    this.teamdata=data
+     })
   }
   Show()
   {
@@ -27,4 +27,4 @@ export class FindteamComponent implements OnInit {
   }
 
 }
- 
+this.ms.getMovie(this.id).subscribe((data:IMovie)=>{

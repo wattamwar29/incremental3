@@ -15,7 +15,7 @@ import { DeleteplayersComponent } from './deleteplayers/deleteplayers.component'
 import { AddteamComponent } from './addteam/addteam.component';
 import { GetteamComponent } from './getteam/getteam.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { FindteamComponent } from './findteam/findteam.component';
+//import { FindteamComponent } from './findteam/findteam.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +28,7 @@ import { FindteamComponent } from './findteam/findteam.component';
     AddteamComponent,
     GetteamComponent,
     NavbarComponent,
-    FindteamComponent,
+    //FindteamComponent,
     
   ],
   imports: [
