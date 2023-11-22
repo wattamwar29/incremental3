@@ -4,26 +4,14 @@
         <table class = "table">
             <thead>
                 <th>Id</th>
-                <th>Name</th>
-                <th>Age</th>
-                <th>Category</th>
-                <th>Bidding Price</th>
-                <th>Team ID</th>
-                
+                <th>Name</th>   
             </thead>
             <tbody>
-                <tr *ngFor = "let m of playerdata">
-                    <td> {{m.id}} </td>
-                    <td> {{m.name}} </td>
-                    <td> {{m.age}} </td>
-                    <td> {{m.category}} </td>
-                    <td> {{m.biddingPrice}} </td>
-                    <td> {{m.teamId}} </td>
-                    
+                <tr *ngFor = "let m of teamdata">
+                    <td> {{m.teamName}} </td>             
+                    <td> {{m.teamId}} </td>    
                 </tr>
             </tbody>
         </table>
-                    
-
     </div>
 </div>
