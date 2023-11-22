@@ -18,6 +18,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { EditteamComponent } from './editteam/editteam.component';
 import { FindteamComponent } from './findteam/findteam.component';
 import { DeleteteamComponent } from './deleteteam/deleteteam.component';
+import { TeamslistComponent } from './teamslist/teamslist.component';
 
 
 
@@ -35,6 +36,7 @@ import { DeleteteamComponent } from './deleteteam/deleteteam.component';
     EditteamComponent,
     FindteamComponent,
     DeleteteamComponent,
+    TeamslistComponent,
  
 
     
