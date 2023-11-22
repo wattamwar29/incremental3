@@ -11,6 +11,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { FindplayersComponent } from './findplayers/findplayers.component';
 import { EditplayersComponent } from './editplayers/editplayers.component';
+import { DeleteplayersComponent } from './deleteplayers/deleteplayers.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { EditplayersComponent } from './editplayers/editplayers.component';
     AddplayersComponent,
     FindplayersComponent,
     EditplayersComponent,
+    DeleteplayersComponent,
     
   ],
   imports: [

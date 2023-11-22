@@ -24,7 +24,7 @@ export class FindplayersComponent implements OnInit {
 
     Show()
 {
-   this.router.navigate(['/GetPlayer'])
+   this.router.navigate(['/getplayers'])
 }
 }
 

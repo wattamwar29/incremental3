@@ -24,7 +24,7 @@ export class EditplayersComponent implements OnInit {
     this.playerdata = player
     this.as.editPlayers(this.playerdata).subscribe(() => {
       alert("Record Edited")
-      this.route.navigate(['/GetPlayer'])
+      this.route.navigate(['/getplayers'])
     })
   }
 }

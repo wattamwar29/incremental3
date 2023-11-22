@@ -26,5 +26,9 @@ export class AdminService {
   {
     return this.httpclient.get<Player>(this.url+'/GetPlayer{id}')
   }
+  deletePlayer(id:number):Observable<Player>
+  {
+    return this.httpclient.delete<Player>(this.url + '/DeletePlayer/' + id)
+  }
 
 }
