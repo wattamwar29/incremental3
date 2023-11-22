@@ -9,7 +9,7 @@ import { DeleteplayersComponent } from './deleteplayers/deleteplayers.component'
 const routes: Routes = [
   {path:'getplayers',component:GetplayersComponent},
   {path:'addplayers',component:AddplayersComponent},
-  {path:'findplayers',component:FindplayersComponent},
+  {path:'GetPlayer/:id',component:FindplayersComponent},
   {path:'editplayers',component:EditplayersComponent},
   {path:'deleteplayers',component:DeleteplayersComponent}
   
