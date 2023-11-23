@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Player } from '../models/player';
+import { Player } from 'src/models/player.model';
 import {HttpErrorResponse,HttpHeaders} from '@angular/common/http';
-import { Team } from '../models/team';
+import { Team } from 'src/models/team.model';
 @Injectable({
   providedIn: 'root'
 })
@@ -23,7 +23,7 @@ export class AdminService {
   editPlayers(playerdata:Player):Observable<Player>{
     return this.httpclient.put<Player>(this.url +'/EditPlayer/'+playerdata.id,playerdata,this.httpOptions)
   }
-  getPlayer(id:number):Observable<Player>
+  getPlayers(id:number):Observable<Player>
   {
     return this.httpclient.get<Player>(this.url+'/GetPlayer/'+id)
   }
@@ -48,7 +48,7 @@ export class AdminService {
  
   editTeam(teamdata:Team):Observable<Team>
   {
-    return this.httpclient.put<Team>(this.url+'/EditTeam/'+teamdata.teamId,teamdata,this.httpOptions)
+    return this.httpclient.put<Team>(this.url+'/EditTeam/'+teamdata.id,teamdata,this.httpOptions)
   }
  
   deleteTeam(id:number):Observable<Team>{

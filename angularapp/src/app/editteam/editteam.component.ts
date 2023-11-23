@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Team } from '../models/team';
+import { Team } from 'src/models/team.model';
 import { AdminService } from '../services/admin.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
@@ -9,7 +9,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./editteam.component.css']
 })
 export class EditteamComponent implements OnInit {
-  teamdata:Team={teamId:0,teamName:''}
+  teamdata:Team={id:0,name:'',maximumBudget:0}
   id:number
  
 

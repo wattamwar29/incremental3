@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AdminService } from '../services/admin.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Team } from '../models/team';
+import { Team } from 'src/models/team.model';
  
 @Component({
   selector: 'app-findteam',

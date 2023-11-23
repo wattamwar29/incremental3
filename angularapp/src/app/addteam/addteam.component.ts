@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AdminService } from '../services/admin.service';
 import { Router } from '@angular/router';
-import { Team } from '../models/team';
+import { Team } from 'src/models/team.model';
 
 @Component({
   selector: 'app-addteam',
@@ -9,7 +9,7 @@ import { Team } from '../models/team';
   styleUrls: ['./addteam.component.css']
 })
 export class AddteamComponent implements OnInit {
-  teamdata:Team={teamId:0,teamName:''}
+  teamdata:Team={id:0,name:'',maximumBudget:0}
   constructor(private as:AdminService,private route:Router) { }
   saveData(team:Team):void{
  

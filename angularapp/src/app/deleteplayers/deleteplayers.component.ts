@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AdminService } from '../services/admin.service';
 import { ActivatedRoute, Route, Router } from '@angular/router';
-import { Player } from '../models/player';
+import { Player } from 'src/models/player.model';
 
 @Component({
   selector: 'app-deleteplayers',
@@ -20,7 +20,7 @@ export class DeleteplayersComponent implements OnInit {
     this.getPlayer(this.id)
   }
   getPlayer(id : number) {
-    this.as.getPlayer(id).subscribe((data : Player) =>
+    this.as.getPlayers(id).subscribe((data : Player) =>
       this.playerdata = data
     )
   }

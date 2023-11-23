@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Team } from '../models/team';
+import { Team } from 'src/models/team.model';
 import { AdminService } from '../services/admin.service';
 import { ActivatedRoute, Router } from '@angular/router';
  
@@ -12,7 +12,7 @@ export class DeleteteamComponent implements OnInit {
  
   constructor(private as:AdminService, private ar: ActivatedRoute, private route: Router) { }
   id : number
-  teamdata:Team = {teamId:0,teamName:''}
+  teamdata:Team = {id:0,name:'',maximumBudget:0}
  
   ngOnInit(): void {
     const tid=this.ar.snapshot.paramMap.get('id')

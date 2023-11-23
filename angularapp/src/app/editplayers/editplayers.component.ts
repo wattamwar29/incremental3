@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AdminService } from '../services/admin.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Player } from '../models/player';
+import { Player } from 'src/models/player.model';
 @Component({
   selector: 'app-editplayers',
   templateUrl: './editplayers.component.html',
@@ -17,7 +17,7 @@ export class EditplayersComponent implements OnInit {
     this.getPlayer(this.id)
   }
   getPlayer(id:number){
-    this.as.getPlayer(id).subscribe((data:Player) => this.playerdata = data)
+    this.as.getPlayers(id).subscribe((data:Player) => this.playerdata = data)
   }
   saveData(player:Player)
   {
