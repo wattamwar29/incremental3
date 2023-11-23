@@ -1,4 +1,5 @@
-export interface Team {
+export class Team {
     teamId:number
     teamName:string
+    maximumBudget:number
 }
