@@ -28,7 +28,7 @@ export class DeleteplayersComponent implements OnInit {
     this.playerdata = player
     this.as.deletePlayer(this.id).subscribe(() => {
       alert("Record Deleted")
-      this.route.navigate(['/getplaters'])
+      this.route.navigate(['/GetPlayer'])
     })
 
 }

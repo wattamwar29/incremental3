@@ -25,7 +25,7 @@ id:number
  
   Show()
   {
-    this.router.navigate(['/ListTeams'])
+    this.router.navigate(['/GetTeam'])
   }
  
 }
