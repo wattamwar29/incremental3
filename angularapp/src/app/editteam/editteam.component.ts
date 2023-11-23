@@ -30,7 +30,7 @@ export class EditteamComponent implements OnInit {
     this.teamdata=team
     this.as.editTeam(this.teamdata).subscribe(()=>{
       alert("Record Edited")
-      this.route.navigate(['/ListTeams'])
+      this.route.navigate(['/GetTeam'])
     })
   }
 

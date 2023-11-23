@@ -22,6 +22,7 @@ import { TeamslistComponent } from './teamslist/teamslist.component';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,6 +38,7 @@ import { TeamslistComponent } from './teamslist/teamslist.component';
     FindteamComponent,
     DeleteteamComponent,
     TeamslistComponent,
+
  
 
     

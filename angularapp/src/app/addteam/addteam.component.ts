@@ -17,7 +17,7 @@ export class AddteamComponent implements OnInit {
     this.as.addTeam(this.teamdata).subscribe(
       ()=>{
         alert('Record added sucessfully')
-        this.route.navigate(['/ListTeams'])
+        this.route.navigate(['/GetTeam'])
       }
     )
   }
