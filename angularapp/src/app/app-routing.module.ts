@@ -12,7 +12,7 @@ import { GetteamComponent } from './getteam/getteam.component';
 
 
 const routes: Routes = [
-  {path:'getplayers',component:GetplayersComponent},
+  {path:'GetPlayer',component:GetplayersComponent},
   {path:'addplayers',component:AddplayersComponent},
   {path:'GetPlayer/:id',component:FindplayersComponent},
   {path:'editplayers/:id',component:EditplayersComponent},
