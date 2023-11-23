@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { AdminService } from '../services/admin.service';
-import { Team } from '../models/team';
 
 @Component({
   selector: 'app-getteam',
@@ -8,7 +7,7 @@ import { Team } from '../models/team';
   styleUrls: ['./getteam.component.css']
 })
 export class GetteamComponent implements OnInit {
-  teamdata: Team[]=[]
+  teamdata: any[]=[]
  
   constructor(private as:AdminService) { 
     this.as.getTeam().subscribe(data =>{this.teamdata.push(...data)})
