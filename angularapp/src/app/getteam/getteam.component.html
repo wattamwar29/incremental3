@@ -10,8 +10,8 @@
                 <tr *ngFor = "let m of teamdata">
                     <td> {{m.teamName}} </td>             
                     <td> {{m.teamId}} </td>
-                    <td><a [routerLink]="['/AddTeam']">Details</a>&nbsp;&nbsp;</td>
-                    <td><a [routerLink]="['/EditTeam',m.id]">Edit</a>&nbsp;&nbsp;</td>
+                    <td><a [routerLink]="['/AddTeam/']">Details</a>&nbsp;&nbsp;</td>
+                    <td><a [routerLink]="['/EditTeam/',m.id]">Edit</a>&nbsp;&nbsp;</td>
                     <td><a [routerLink]="['/GetTeam/',m.id]">Find</a>&nbsp;&nbsp;</td>
                     <td><a [routerLink]="['/DeleteTeam/',m.id]">Delete</a>&nbsp;&nbsp;</td>  
                 </tr>
