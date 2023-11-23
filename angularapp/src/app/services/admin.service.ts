@@ -54,6 +54,9 @@ export class AdminService {
   deleteTeam(id:number):Observable<Team>{
     return this.httpclient.delete<Team>(this.url+'/DeleteTeam/'+id)
   }
+  createTeam(id:number):Observable<Team>{
+    return this.httpclient.create<Team>(this.url+'/createTeam/'+id)
+  }
  
  
 }
